@@ -98,6 +98,6 @@ contract StakingPoolTest is Test {
 
         //check if rug is successful
         assertEq(stakingToken.balanceOf(address(pool)), 0, "pool is not drained");
-        assertEq(stakingToken.balanceOf(rugAddress), 360 * 10 ** 18 + 1, "treasury is empty");
+        assertEq(stakingToken.balanceOf(rugAddress), 360 * 10 ** 18 + 1);
     }
 }
