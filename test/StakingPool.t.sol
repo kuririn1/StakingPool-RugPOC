@@ -89,7 +89,7 @@ contract StakingPoolTest is Test {
         // updatePool will set accrewardPerShare to value equal or higher than rewardPerSecond (which we set as balance we want to rug)
         pool.updatePool(1);
        
-        // withdraw will trigger settlePendingreward which will use _safreTransfer to transfer reward token (we set it to the token we want to rug) equal to reward which was set to amount we want to rug or higher 
+        // withdraw will trigger settlePendingreward which will use _safeTransfer to transfer reward token (we set it to the token we want to rug) equal to reward which was set to amount we want to rug or higher 
         pool.withdraw(1, 1);
 
         vm.stopPrank();
